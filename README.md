@@ -64,8 +64,6 @@ That's it. Nothing else needed.
 - Multi-page website structure
 
 ## Contact
-Created by Oumaima Deri
-GitHub: oumaimaderi
 email adress : oumaimaderi07@gmail.com
 
 

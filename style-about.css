@@ -1,0 +1,208 @@
+/* ===== STORY SECTION ===== */
+.story-section {
+    padding: 5rem 5%;
+    background: #0f1e2a;
+}
+
+.story-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.story-image {
+    height: 600px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.story-image:hover img {
+    transform: scale(1.05);
+}
+
+.story-text {
+    padding: 2rem;
+}
+
+.gold-tag {
+    color: #d4af37;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.story-text h2 {
+    font-size: 3rem;
+    color: #f5f5f5;
+    margin-bottom: 0.5rem;
+}
+
+.story-text h3 {
+    font-size: 2rem;
+    color: #d4af37;
+    margin-bottom: 2rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+}
+
+.story-text p {
+    color: #aaa;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* ===== PHILOSOPHY ===== */
+.philosophy {
+    padding: 5rem 5%;
+    background: #051016;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.philosophy-item {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    transition: all 0.3s ease;
+}
+
+.philosophy-item:hover {
+    border-color: #d4af37;
+    transform: translateY(-5px);
+}
+
+.philosophy-item h3 {
+    color: #d4af37;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.philosophy-item p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+/* ===== TIMELINE ===== */
+.timeline {
+    padding: 5rem 5%;
+    background: #0f1e2a;
+}
+
+.timeline-container {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    position: relative;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 120px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: rgba(212, 175, 55, 0.3);
+}
+
+.timeline-item {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-year {
+    width: 100px;
+    text-align: right;
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem;
+    color: #d4af37;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-year::after {
+    content: '';
+    position: absolute;
+    right: -38px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    background: #d4af37;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #d4af37;
+}
+
+.timeline-content {
+    flex: 1;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    border-color: #d4af37;
+    transform: translateX(10px);
+}
+
+.timeline-content h3 {
+    color: #f5f5f5;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.timeline-content p {
+    color: #aaa;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .philosophy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .story-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-container::before {
+        left: 60px;
+    }
+    
+    .timeline-year {
+        width: 60px;
+        font-size: 1.2rem;
+    }
+    
+    .timeline-year::after {
+        right: -28px;
+    }
+}
